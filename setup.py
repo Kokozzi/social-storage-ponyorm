@@ -18,7 +18,7 @@ setup(
     description='Python Social Authentication, SQLAlchemy storage.',
     license='BSD',
     keywords='sqlalchemy, social auth',
-    url='https://github.com/fu2re/social-storage-sqlalchemy',
+    url='https://github.com/fu2re/social-storage-ponyorm',
     packages=['social_pony'],
     long_description=long_description(),
     install_requires=load_requirements(),
