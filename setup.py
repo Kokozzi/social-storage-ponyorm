@@ -11,15 +11,15 @@ def load_requirements():
     return open(join(dirname(__file__), 'requirements.txt')).readlines()
 
 setup(
-    name='social-auth-storage-sqlalchemy',
-    version=__import__('social_sqlalchemy').__version__,
+    name='social-auth-storage-pony',
+    version=__import__('social_pony').__version__,
     author='Matias Aguirre',
     author_email='matiasaguirre@gmail.com',
     description='Python Social Authentication, SQLAlchemy storage.',
     license='BSD',
     keywords='sqlalchemy, social auth',
-    url='https://github.com/python-social-auth/social-storage-sqlalchemy',
-    packages=['social_sqlalchemy'],
+    url='https://github.com/fu2re/social-storage-sqlalchemy',
+    packages=['social_pony'],
     long_description=long_description(),
     install_requires=load_requirements(),
     classifiers=[
