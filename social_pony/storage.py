@@ -64,7 +64,7 @@ class PonyUserMixin(PonyMixin, UserMixin):
     composite_index('provider', 'uid')
 
     provider = Required(str, 32)
-    extra_data = Optional(Json)
+    extra_data = Optional(LongStr)
 
     uid = None
     user_id = None
@@ -75,7 +75,8 @@ class PonyUserMixin(PonyMixin, UserMixin):
         cls._save_instance(user)
 
     def set_extra_data(self, extra_data=None):
-        if super(PonyUserMixin, self).set_extra_data(extra_data):
+        if not extra_data: return
+        if super(PonyUserMixin, self).set_extra_data(json.dumps(extra_data)):
             self._save_instance(self)
 
     @classmethod
